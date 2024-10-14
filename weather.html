@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gilroy', sans-serif;
+        }
+        html, body{
+            height: 100vh;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            border: 2px solid black;
+            height: 500px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .container img{
+            height: 100px;
+            width: 100px;
+        }
+        .container h1{
+            font-weight: 600;
+            font-size: 2vw;
+        }
+        .city{
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .city input{
+            padding: 0.3vw .5vw;
+        }
+        button{
+            padding: 0.5vw 2.5vw;
+            font-weight: 500;
+            font-size: 1vw;
+            background: transparent;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #citySpan{
+            text-decoration: underline;
+        }
+        #temp{
+            text-decoration: underline;
+        }
+
+
+       @media (max-width:600px) {
+        body{
+            height: 100vh;
+            width: 100%;
+            padding: 0 3vw;
+            overflow: hidden;
+        }
+        .container{
+            border-radius: 10px;
+        }
+        button{
+            padding: 2.5vw 4vw;
+            font-size: 3vw;
+        }
+        input{
+            padding: 4vw 5vw;
+        }
+
+       } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="reshot-icon-partly-cloudy-UW8BTQN963.svg" alt="">
+        <h1>Weather App</h1>
+        <div class="city">
+            <form action="">
+                <label for="city">City</label>
+                <input name="city" type="text" placeholder="Enter city">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="results">
+            The Temperature in <span id="citySpan">your city</span> is <span id="temp"></span>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
